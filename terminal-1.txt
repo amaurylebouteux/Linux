@@ -1,0 +1,40 @@
+amaury@amaury-L:~$ ls
+Bureau     Downloads         Images   Public           test.sh
+demo.cast  Dropbox           Modèles  snap             Vidéos
+Documents  examples.desktop  Musique  Téléchargements
+amaury@amaury-L:~$ ls Téléchargements
+actualisationAmauryAout2019.pdf     the-basics-of-ux-design.pdf
+actualisationAmauryJuillet2019.pdf  Unidialog_6894650.pdf
+org.gimp.GIMP.flatpakref
+amaury@amaury-L:~$ pwd
+/home/amaury
+amaury@amaury-L:~$ cd Images
+amaury@amaury-L:~/Images$ pwd
+/home/amaury/Images
+amaury@amaury-L:~/Images$ cd ..
+amaury@amaury-L:~$ pwd
+/home/amaury
+amaury@amaury-L:~$ cd ..
+amaury@amaury-L:/home$ pwd
+/home
+amaury@amaury-L:/home$ cd ..
+amaury@amaury-L:/$ pwd
+/
+amaury@amaury-L:/$ ls
+bin    dev   initrd.img      lib64       mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib             media       proc  sbin  swapfile  usr  vmlinuz.old
+amaury@amaury-L:/$ cd /home/amaury
+amaury@amaury-L:~$ pwd
+/home/amaury
+amaury@amaury-L:~$ cd images
+bash: cd: images: Aucun fichier ou dossier de ce type
+amaury@amaury-L:~$ cd Images
+amaury@amaury-L:~/Images$ 
+amaury@amaury-L:~/Images$ cd
+amaury@amaury-L:~$  cd Images
+amaury@amaury-L:~/Images$ cd ~
+amaury@amaury-L:~$ cd ~/Musique
+amaury@amaury-L:~/Musique$ pwd
+/home/amaury/Musique
+amaury@amaury-L:~/Musique$ 
