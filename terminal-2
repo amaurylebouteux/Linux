@@ -1,0 +1,245 @@
+amaury@amaury-L:~$ sudo apt-get install -y tree wget unzip
+[sudo] Mot de passe de amaury : 
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances       
+Lecture des informations d'état... Fait
+unzip est déjà la version la plus récente (6.0-21ubuntu1).
+wget est déjà la version la plus récente (1.19.4-1ubuntu2.2).
+Le paquet suivant a été installé automatiquement et n'est plus nécessaire :
+  libllvm7
+Veuillez utiliser « sudo apt autoremove » pour le supprimer.
+Les NOUVEAUX paquets suivants seront installés :
+  tree
+0 mis à jour, 1 nouvellement installés, 0 à enlever et 7 non mis à jour.
+Il est nécessaire de prendre 40,7 ko dans les archives.
+Après cette opération, 105 ko d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://fr.archive.ubuntu.com/ubuntu bionic/universe amd64 tree amd64 1.7.0-5 [40,7 kB]
+40,7 ko réceptionnés en 0s (267 ko/s)
+Sélection du paquet tree précédemment désélectionné.
+(Lecture de la base de données... 185976 fichiers et répertoires déjà installés.)
+Préparation du dépaquetage de .../tree_1.7.0-5_amd64.deb ...
+Dépaquetage de tree (1.7.0-5) ...
+Paramétrage de tree (1.7.0-5) ...
+Traitement des actions différées (« triggers ») pour man-db (2.8.3-2ubuntu0.1) ...
+amaury@amaury-L:~$ wget https://github.com/bhubr/bhubr.github.io/raw/master/wild/planets.zip
+--2019-09-15 17:21:13--  https://github.com/bhubr/bhubr.github.io/raw/master/wild/planets.zip
+Résolution de github.com (github.com)… 140.82.118.4
+Connexion à github.com (github.com)|140.82.118.4|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 302 Found
+Emplacement : https://raw.githubusercontent.com/bhubr/bhubr.github.io/master/wild/planets.zip [suivant]
+--2019-09-15 17:21:13--  https://raw.githubusercontent.com/bhubr/bhubr.github.io/master/wild/planets.zip
+Résolution de raw.githubusercontent.com (raw.githubusercontent.com)… 151.101.120.133
+Connexion à raw.githubusercontent.com (raw.githubusercontent.com)|151.101.120.133|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 300234 (293K) [application/zip]
+Enregistre : «planets.zip»
+
+planets.zip         100%[===================>] 293,20K  1,12MB/s    ds 0,3s    
+
+2019-09-15 17:21:14 (1,12 MB/s) - «planets.zip» enregistré [300234/300234]
+
+amaury@amaury-L:~$ unzip planets.zip
+Archive:  planets.zip
+   creating: planets/
+  inflating: planets/mercury.jpeg    
+  inflating: planets/earth.jpeg      
+  inflating: planets/pluto.jpeg      
+  inflating: planets/arrakis.jpeg    
+  inflating: planets/jupiter.jpeg    
+  inflating: planets/venus.jpeg      
+  inflating: planets/mars.jpeg       
+  inflating: planets/cybertron.jpeg  
+  inflating: planets/coruscant.jpeg  
+  inflating: planets/uranus.jpeg     
+  inflating: planets/neptune.jpeg    
+  inflating: planets/saturn.jpeg     
+amaury@amaury-L:~$ rm -r planets
+amaury@amaury-L:~$ mv planets.zip ~/quetes/shell
+amaury@amaury-L:~$ cd ~/quetes/shell
+amaury@amaury-L:~/quetes/shell$ ls
+copie-de-fruits  fruits  legumes  planets.zip
+amaury@amaury-L:~/quetes/shell$ rm -r copie-de-fruits
+amaury@amaury-L:~/quetes/shell$ unzip planets.zip
+Archive:  planets.zip
+   creating: planets/
+  inflating: planets/mercury.jpeg    
+  inflating: planets/earth.jpeg      
+  inflating: planets/pluto.jpeg      
+  inflating: planets/arrakis.jpeg    
+  inflating: planets/jupiter.jpeg    
+  inflating: planets/venus.jpeg      
+  inflating: planets/mars.jpeg       
+  inflating: planets/cybertron.jpeg  
+  inflating: planets/coruscant.jpeg  
+  inflating: planets/uranus.jpeg     
+  inflating: planets/neptune.jpeg    
+  inflating: planets/saturn.jpeg     
+amaury@amaury-L:~/quetes/shell$ eog planets
+amaury@amaury-L:~/quetes/shell$ mkdir planets/real planets/fictional planets/inhabited
+amaury@amaury-L:~/quetes/shell$ cd planets
+amaury@amaury-L:~/quetes/shell/planets$ mkdir real/telluric real/gas-giants real/dwarf-planets
+amaury@amaury-L:~/quetes/shell/planets$ mv m* earth venus real/telluric/
+mv: impossible d'évaluer 'earth': Aucun fichier ou dossier de ce type
+mv: impossible d'évaluer 'venus': Aucun fichier ou dossier de ce type
+amaury@amaury-L:~/quetes/shell/planets$ mv earth.jpeg venus.jpeg real/telluric/
+amaury@amaury-L:~/quetes/shell/planets$ find
+.
+./uranus.jpeg
+./arrakis.jpeg
+./cybertron.jpeg
+./neptune.jpeg
+./pluto.jpeg
+./jupiter.jpeg
+./coruscant.jpeg
+./real
+./real/gas-giants
+./real/dwarf-planets
+./real/telluric
+./real/telluric/mercury.jpeg
+./real/telluric/mars.jpeg
+./real/telluric/venus.jpeg
+./real/telluric/earth.jpeg
+./fictional
+./inhabited
+amaury@amaury-L:~/quetes/shell/planets$ mv uranus.jpeg neptune.jpeg jupiter.jpeg real/gas-giants/
+amaury@amaury-L:~/quetes/shell/planets$ find
+.
+./arrakis.jpeg
+./cybertron.jpeg
+./pluto.jpeg
+./coruscant.jpeg
+./real
+./real/gas-giants
+./real/gas-giants/uranus.jpeg
+./real/gas-giants/neptune.jpeg
+./real/gas-giants/jupiter.jpeg
+./real/dwarf-planets
+./real/telluric
+./real/telluric/mercury.jpeg
+./real/telluric/mars.jpeg
+./real/telluric/venus.jpeg
+./real/telluric/earth.jpeg
+./fictional
+./inhabited
+./saturn.jpeg
+amaury@amaury-L:~/quetes/shell/planets$ eog planets
+amaury@amaury-L:~/quetes/shell/planets$ cd ..
+amaury@amaury-L:~/quetes/shell$ eog planets
+^C
+amaury@amaury-L:~/quetes/shell$ cd planets
+amaury@amaury-L:~/quetes/shell/planets$ mv pluto.jpeg real/dwarf-planets
+amaury@amaury-L:~/quetes/shell/planets$ mv arrakis.jpeg c* fictional/
+amaury@amaury-L:~/quetes/shell/planets$ find
+.
+./real
+./real/gas-giants
+./real/gas-giants/uranus.jpeg
+./real/gas-giants/neptune.jpeg
+./real/gas-giants/jupiter.jpeg
+./real/dwarf-planets
+./real/dwarf-planets/pluto.jpeg
+./real/telluric
+./real/telluric/mercury.jpeg
+./real/telluric/mars.jpeg
+./real/telluric/venus.jpeg
+./real/telluric/earth.jpeg
+./fictional
+./fictional/arrakis.jpeg
+./fictional/cybertron.jpeg
+./fictional/coruscant.jpeg
+./inhabited
+./saturn.jpeg
+amaury@amaury-L:~/quetes/shell/planets$ cp fictional/arrakis.jpeg c* inhabited/
+cp: impossible d'évaluer 'c*': Aucun fichier ou dossier de ce type
+amaury@amaury-L:~/quetes/shell/planets$ cd fictional
+amaury@amaury-L:~/quetes/shell/planets/fictional$ cp c* arrakis.jpeg ../inhabited
+amaury@amaury-L:~/quetes/shell/planets/fictional$ ls inhabited
+ls: impossible d'accéder à 'inhabited': Aucun fichier ou dossier de ce type
+amaury@amaury-L:~/quetes/shell/planets/fictional$ ls ../inhabited
+arrakis.jpeg  coruscant.jpeg  cybertron.jpeg
+amaury@amaury-L:~/quetes/shell/planets/fictional$ cd ..
+amaury@amaury-L:~/quetes/shell/planets$ cd telluric
+bash: cd: telluric: Aucun fichier ou dossier de ce type
+amaury@amaury-L:~/quetes/shell/planets$ cd real/telluric
+amaury@amaury-L:~/quetes/shell/planets/real/telluric$ cp earth ../../inhabited
+cp: impossible d'évaluer 'earth': Aucun fichier ou dossier de ce type
+amaury@amaury-L:~/quetes/shell/planets/real/telluric$ cp earth.jpeg ../../inhabited
+amaury@amaury-L:~/quetes/shell/planets/real/telluric$ cd ..
+amaury@amaury-L:~/quetes/shell/planets/real$ rm -r dwarf-planets
+amaury@amaury-L:~/quetes/shell/planets/real$ 
+amaury@amaury-L:~/quetes/shell/planets/real$ cd ..
+amaury@amaury-L:~/quetes/shell/planets$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── earth.jpeg
+├── real
+│   ├── gas-giants
+│   │   ├── jupiter.jpeg
+│   │   ├── neptune.jpeg
+│   │   └── uranus.jpeg
+│   └── telluric
+│       ├── earth.jpeg
+│       ├── mars.jpeg
+│       ├── mercury.jpeg
+│       └── venus.jpeg
+└── saturn.jpeg
+
+5 directories, 15 files
+amaury@amaury-L:~/quetes/shell/planets$ mv saturn.jpeg real/gas-giant
+amaury@amaury-L:~/quetes/shell/planets$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── earth.jpeg
+└── real
+    ├── gas-giant
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   ├── neptune.jpeg
+    │   └── uranus.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+5 directories, 15 files
+amaury@amaury-L:~/quetes/shell/planets$ mv real/gas-giant real/gas-giants/saturn.jpeg
+amaury@amaury-L:~/quetes/shell/planets$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── earth.jpeg
+└── real
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   ├── neptune.jpeg
+    │   ├── saturn.jpeg
+    │   └── uranus.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+5 directories, 15 files
+amaury@amaury-L:~/quetes/shell/planets$ 
